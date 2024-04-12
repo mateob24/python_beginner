@@ -26,7 +26,26 @@ ultimas_filas = df.tail(2)
 #aplicando el desempaquetar
 filas_y_columnas_totales = df.shape
 
-print(filas_y_columnas_totales)
+#Obteniendo data estadística del dataframe:
+df_info = df.describe()
+
+#Accediendo al elemento edad en su fila '1' -> uso de 'loc'
+elemento_especifico_loc = df.loc[1,"edad"]
+
+#Accediendo al elemento edad en su fila '2' -> uso de 'iloc'
+elemento_especifico_iloc = df.iloc[2,2]
+
+#Accediendo a todas las filas de una columna -> uso de 'iloc'
+apellidos = df.iloc[:,1]
+
+#Accediendo a toda la fila 3 -> uso de 'loc'
+fila_3_loc = df.loc[2,:]
+
+#Accediendo a toda la fila 3 -> uso de 'iloc'
+fila_3 = df.loc[2,:]
+
+
+print(fila_3)
 
 #--------------------------
 
